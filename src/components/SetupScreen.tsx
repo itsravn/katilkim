@@ -165,10 +165,17 @@ export const SetupScreen = () => {
         disabled={!isReady} 
         onClick={startGame}
         style={{ width: '100%', padding: '16px', fontSize: '1.1rem' }}
-        className={`flex items-center justify-center gap-2 ${isReady ? 'bg-white text-black' : 'bg-white/10 text-white/50'}`}
+        className={`flex items-center justify-center gap-2 rounded-2xl transition-all ${isReady ? 'bg-white text-black' : 'bg-white/10 text-white/50'}`}
       >
         Oyunu Başlat <ChevronRight size={20} />
       </motion.button>
+
+      <hr className="border-white/10 my-6 w-full" />
+      
+      <div className="text-center text-sm text-white/50">
+        Made with 💖 by <a href="https://github.com/itsravn" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors">itsravn</a>
+      </div>
     </motion.div>
   );
 };
+
