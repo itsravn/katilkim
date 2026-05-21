@@ -1,73 +1,59 @@
-# React + TypeScript + Vite
+# 🧛‍♂️ Katil Kim? (Vampir Köylü) - Moderatörsüz Deneyim
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Arkadaşlarınızla bir araya geldiniz, Vampir Köylü oynamak istiyorsunuz ama kimse **moderatör** olmak istemiyor mu? "Katil Kim?", tam da bu sorunu çözmek için geliştirildi! 
 
-Currently, two official plugins are available:
+Telefonunuzu masanın ortasına koyun ve arkanıza yaslanın. Oyunun bütün yönetimini, sesli komutlarını ve gece-gündüz döngülerini bu web uygulaması sizin yerinize yapacak. Üstelik sıfır kurulumla! 🚀
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Özellikler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+*   **🗣️ Sesli Moderatör (TTS):** Gözleriniz kapalıyken bile telefon size kimin uyanıp kimin uyuyacağını Türkçe sesli asistanla söyler.
+*   **📱 PWA Desteği (Native App Hissi):** Uygulamayı tarayıcınızdan açıp **"Ana Ekrana Ekle"** diyerek tıpkı App Store veya Play Store'dan indirilmiş gerçek bir mobil oyun gibi (tam ekran, üst limitsiz) oynayabilirsiniz.
+*   **🎨 Premium Tasarım:** Framer Motion ile güçlendirilmiş yumuşak geçişler, 3D kart çevirme (flip) efektleri ve karanlık uzay (Apple Frosted Glass) tasarımı.
+*   **💾 Çevrimdışı/Hafıza Desteği:** Oyun ortasında ekran kilitlense veya sekmeyi kapatsanız bile, LocalStorage sayesinde oyun nerede kaldıysa tam oradan devam eder.
+*   **⚡ Sunucusuz (Zero-Backend):** Verileriniz tamamen cihazınızda kalır, internette hiçbir sunucuya veri gönderilmez. Bu sayede sıfır gecikme!
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🎮 Nasıl Oynanır?
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1.  **Rolleri ve İsimleri Dağıtın:** Oyuncu isimlerini girin ve toplam kişi sayısı kadar (Katil, Doktor, Köylü) rol belirleyin.
+2.  **Kartları Çekin:** Telefon "Ahmet'e ver" dediğinde, Ahmet telefonu alır, kartının üzerine dokunup rolünü gizlice öğrenir ve anladım diyerek geri bırakır.
+3.  **Gece Fazı:** Telefon masanın ortasında durur. Sesli asistan sırayla önce Katilleri, sonra Doktoru uyandırır. Sırası gelen oyuncular sessizce uyanıp ekrandan seçimlerini yapar.
+4.  **Gündüz Fazı:** Asistan herkesi uyandırır, gece yaşananları açıklar. 2 dakikalık tartışma süresi başlar.
+5.  **Köy Meydanı (Oylama):** Köy oylaması yapılır ve en çok oy alan kişi asılır (veya kimse asılmaz). Oyun, katiller bitene veya köy ele geçirilene kadar devam eder!
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🛠️ Teknolojiler (Sihrin Arkasındakiler)
+
+*   **Vite + React (TypeScript):** Işık hızında render ve tip güvenliği.
+*   **Zustand:** Mükemmel ve hafif state yönetimi (oyun içi faz geçişleri).
+*   **Tailwind CSS + Framer Motion:** Göz alıcı animasyonlar, fizik tabanlı yaylanmalar ve pürüzsüz tasarım.
+*   **Web Speech API:** Tarayıcının yerleşik metin-okuma motoru (TTS).
+
+---
+
+## 🚀 Kendin Kur ve Geliştir!
+
+Eğer projeyi kendi bilgisayarında çalıştırmak istersen:
+
+```bash
+# Repoyu klonla
+git clone https://github.com/itsravn/katilkim.git
+
+# Bağımlılıkları yükle
+npm install
+
+# Geliştirme sunucusunu başlat
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Projeyi GitHub Pages üzerinden canlıya almak istersen:
+```bash
+npm run build && npm run deploy
 ```
+
+---
+*Bol entrikalı, bol blöflü oyunlar dileriz! Yakalanmamaya çalış...* 🤫🔪
