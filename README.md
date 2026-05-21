@@ -6,6 +6,8 @@ Telefonunuzu masanın ortasına koyun ve arkanıza yaslanın. Oyunun bütün yö
 
 ---
 
+test : https://itsravn.github.io/katilkim/
+
 ## ✨ Özellikler
 
 *   **🗣️ Sesli Moderatör (TTS):** Gözleriniz kapalıyken bile telefon size kimin uyanıp kimin uyuyacağını Türkçe sesli asistanla söyler.
