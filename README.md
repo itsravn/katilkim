@@ -58,4 +58,4 @@ npm run build && npm run deploy
 ```
 
 ---
-*Bol entrikalı, bol blöflü oyunlar dileriz! Yakalanmamaya çalış...* 🤫🔪
+<p align="center">Made with ❤️ by <a href="https://github.com/itsravn">itsravn</a></p>
